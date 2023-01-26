@@ -1,0 +1,10 @@
+name: renovate-app
+
+services:
+  renovate:
+    image: renovate/renovate
+    environment:
+      RENOVATE_CONFIG_FILE: /config.js
+      LOG_LEVEL: debug
+    volumes:
+      - ./renovate/config.js:/config.js
